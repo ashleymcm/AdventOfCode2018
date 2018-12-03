@@ -3,7 +3,7 @@ import os, sys
 
 dirname, filename = os.path.split(os.path.abspath(sys.argv[0]))
 
-##loop through input rows, or "rectangles"
+##loop through input rows, or "frequencies"
 with open(os.path.join(dirname, "input.txt")) as frequency_list:
     frequencies = [frequencies.split() for frequencies in frequency_list]
 
