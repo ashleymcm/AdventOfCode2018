@@ -16,10 +16,11 @@ i = 0
 
 ##loop through timestamps to collect guard data. I'm using a 
 ##while loop because iteration is weird and this makes sense to me:
-##each loop should be one guard's block in the schedule
+##each loop should be one guard's "block" in the schedule
 while i < len(timestamps):
     timestamp = timestamps[i]
-    ##initializing count j
+    ##initializing counter j, which helps us keep track of where we
+    ##are in the current guard's "block"
     j = 1
 
     ##we'll always want to be able to see one timestamp ahead
