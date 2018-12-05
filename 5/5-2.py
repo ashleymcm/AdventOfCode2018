@@ -28,13 +28,14 @@ with open(os.path.join(dirname, "input.txt")) as fileobj:
            polymer += ch
 
 ##initialize min
+original_polymer = polymer
 min = len(polymer)
 
 ##loop through alphabet
 for c in ascii_lowercase:
 
     polymer = remove_unit(c, polymer)
-
+    print(c, polymer)
     ##loop through polymer
     while i < len(polymer):  
         ##if this is the last unit, then we can stop the loop
@@ -56,8 +57,11 @@ for c in ascii_lowercase:
         else:
             i += 1
     
+    print(c, polymer)
     if len(polymer) < min:
         min = len(polymer)
+    
+    polymer = original_polymer
 
 print(min)
 
